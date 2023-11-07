@@ -6,7 +6,7 @@ def fizz_buzz(number)
   elsif number % 5 == 0
     "Buzz"
   else
-    number.to_s
+    number.to_s  #.to_sは数値オブジェクトなどを文字列オブジェクトに変換する
   end
 end
 
