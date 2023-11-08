@@ -32,3 +32,12 @@ car.turn("右")
 
 car = Car.new       #① Carクラスのインスタンス生成 → carに代入
 car.run(5)          #② Carクラスのrunメソッドの呼び出し(引数は 5)
+
+#クラスメソッド
+class Car
+  def self.run(distance) #② runメソッドを上から読み込んでいく
+    puts "車で#{distance}キロ走ります。"
+  end
+end
+
+Car.run(10) #① Carクラスのrunメソッドを呼び出し
