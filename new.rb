@@ -18,10 +18,17 @@
 #インスタンス名.メソッド名(引数) #呼び出し
 
 class Car
-  def run(distance)
+  def turn(direction) #turnは曲がるという動作を想定
+    puts "#{direction}に曲がります"
+  end
+  
+  def run(distance) #③ runメソッドを上から読み込んでいく
     puts "車で#{distance}キロ走ります。"
   end
 end
 
 car = Car.new
-car.run(5)
+car.turn("右")
+
+car = Car.new       #① Carクラスのインスタンス生成 → carに代入
+car.run(5)          #② Carクラスのrunメソッドの呼び出し(引数は 5)
