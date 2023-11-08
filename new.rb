@@ -18,6 +18,11 @@
 #インスタンス名.メソッド名(引数) #呼び出し
 
 class Car
+  def move(direction, distance)
+    self.turn(direction)
+    self.run(distance)
+  end
+  
   def turn(direction) #turnは曲がるという動作を想定
     puts "#{direction}に曲がります"
   end
@@ -28,7 +33,7 @@ class Car
 end
 
 car = Car.new
-car.turn("右")
+car.move("右",5)
 
 car = Car.new       #① Carクラスのインスタンス生成 → carに代入
 car.run(5)          #② Carクラスのrunメソッドの呼び出し(引数は 5)
